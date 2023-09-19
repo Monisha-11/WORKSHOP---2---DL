@@ -14,6 +14,9 @@ Write a Python Program For CIFAR - 10 Dataset.The CIFAR-10 dataset consists of 6
 
 ## NETWORK MODEL:
 
+<img width="320" alt="image" src="https://github.com/Monisha-11/WORKSHOP---2---DL/assets/93427240/75405fc0-ebcc-4e43-870f-417d48682df7">
+
+
 ## PROGRAM:
 
 ```python
@@ -66,7 +69,45 @@ model.fit(X_train_scaled ,y_train_onehot, epochs=3,
           batch_size=84,
           validation_data=(X_test_scaled,y_test_onehot))
 
+4) Plot iteration vs accuracy and iteration vs loss for test and training data
+
+metrics = pd.DataFrame(model.history.history)
+metrics.head()
+metrics[['accuracy','val_accuracy']].plot()
+metrics[['loss','val_loss']].plot()
+
+5) Training the model to get more than 80% accuracy
+
+x_test_predictions = np.argmax(model.predict(X_test_scaled), axis=1)
+print(confusion_matrix(y_test,x_test_predictions))
+print(classification_report(y_test,x_test_predictions))
+
+```
+## OUTPUT:
+
+### DETECTED IMAGE 
+
+<img width="396" alt="image" src="https://github.com/Monisha-11/WORKSHOP---2---DL/assets/93427240/545dd2f0-f553-4c96-9bac-7139a5c82395">
+
+### ACCURACY
+
+<img width="500" alt="image" src="https://github.com/Monisha-11/WORKSHOP---2---DL/assets/93427240/ea7ebe86-515f-4349-8503-b312fc15f0ce">
+
+### LOSS 
+
+<img width="497" alt="image" src="https://github.com/Monisha-11/WORKSHOP---2---DL/assets/93427240/c61ad9bc-f909-47e2-b200-e74f85d33541">
+
+### confusion_matrix
+
+![image](https://github.com/Monisha-11/WORKSHOP---2---DL/assets/93427240/e5b172d8-4829-43ed-8c8b-736f49bbd511)
+
+### classification_report
+
+<img width="410" alt="image" src="https://github.com/Monisha-11/WORKSHOP---2---DL/assets/93427240/dbdc879d-68d2-46a6-ac64-e8fc72690024">
 
 
+## RESULT:
+
+Thus the program sucessfully run by 63% accuracy.
 
 
