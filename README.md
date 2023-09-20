@@ -14,7 +14,8 @@ Write a Python Program For CIFAR - 10 Dataset.The CIFAR-10 dataset consists of 6
 
 ## NETWORK MODEL:
 
-<img width="320" alt="image" src="https://github.com/Monisha-11/WORKSHOP---2---DL/assets/93427240/75405fc0-ebcc-4e43-870f-417d48682df7">
+<img width="868" alt="image" src="https://github.com/Monisha-11/WORKSHOP---2---DL/assets/93427240/10dd528d-99d2-41a1-8d25-1599328ab68e">
+
 
 
 ## PROGRAM:
